@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .cadastro-container {
@@ -19,42 +19,62 @@ body {
 
 .cadastro-box {
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho do formulário */
 }
 
 .cadastro-box h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
 }
 
 .cadastro-box form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 1em;
+    color: #444;
 }
 
 .cadastro-box form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px 15px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que padding e border não ultrapassem o tamanho */
 }
 
 .cadastro-box form button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #2679d2;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 .cadastro-box form button:hover {
-    background-color: #218838;
+    background-color: #1e6bb5;
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 480px) {
+    .cadastro-box {
+        padding: 20px;
+    }
+
+    .cadastro-box h1 {
+        font-size: 1.5em;
+    }
 }

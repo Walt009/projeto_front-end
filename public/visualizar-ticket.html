@@ -19,5 +19,45 @@
             </div>
         </div>
     </div>
+    <!-- Ícone do chatbot -->
+    <div class="chat-icon" onclick="toggleChat()">
+        <img src="fotos/chat.jpg" alt="Chat Icon">
+    </div>
+
+    <!-- Janela do chatbot -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            Chatbot
+            <button class="close-button" onclick="toggleChat()">X</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- Respostas aparecerão aqui -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const chatBody = document.getElementById('chatBody');
+            if (userInput.trim()) {
+                chatBody.innerHTML += <p><b>Você:</b> ${userInput}</p>;
+                document.getElementById('userInput').value = '';
+
+                // Simulação de resposta da API (substitua pela integração real da API)
+                setTimeout(() => {
+                    chatBody.innerHTML += <p><b>Bot:</b> Esta é uma resposta simulada. Substitua com a integração da API.</p>;
+                }, 1000);
+            }
+        }
+    </script>
 </body>
 </html>
