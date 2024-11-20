@@ -35,7 +35,7 @@
     </section>
     <!-- Ícone do chatbot -->
     <div class="chat-icon" onclick="toggleChat()">
-        <img src="fotos/chat.jpg" alt="Chat Icon">
+        <img src="chat.jpg" alt="Chat Icon">
     </div>
 
     <!-- Janela do chatbot -->
@@ -52,26 +52,29 @@
             <button onclick="sendMessage()">Enviar</button>
         </div>
     </div>
+</div>
 
-    <script>
-        function toggleChat() {
-            const chatWindow = document.getElementById('chatWindow');
-            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+ <script>
+    // Função para abrir e fechar o chatbot
+    function toggleChat() {
+        const chatWindow = document.getElementById('chatWindow');
+        chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+    }
+
+    // Simulação de envio de mensagem
+    async function sendMessage() {
+        const userInput = document.getElementById('userInput').value;
+        const chatBody = document.getElementById('chatBody');
+        if (userInput.trim()) {
+            chatBody.innerHTML += `<p><b>Você:</b> ${userInput}</p>`;
+            document.getElementById('userInput').value = '';
+
+            // Simulação de resposta da API
+            setTimeout(() => {
+                chatBody.innerHTML += `<p><b>Bot:</b> Esta é uma resposta simulada. Substitua com a integração da API.</p>`;
+            }, 1000);
         }
-
-        async function sendMessage() {
-            const userInput = document.getElementById('userInput').value;
-            const chatBody = document.getElementById('chatBody');
-            if (userInput.trim()) {
-                chatBody.innerHTML += <p><b>Você:</b> ${userInput}</p>;
-                document.getElementById('userInput').value = '';
-
-                // Simulação de resposta da API (substitua pela integração real da API)
-                setTimeout(() => {
-                    chatBody.innerHTML += <p><b>Bot:</b> Esta é uma resposta simulada. Substitua com a integração da API.</p>;
-                }, 1000);
-            }
-        }
-    </script>
+    }
+ </script>
 </body>
 </html>

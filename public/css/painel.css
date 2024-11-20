@@ -54,6 +54,26 @@ header nav ul li a {
     text-align: center;
 }
 
+/* Ícone do chatbot */
+.chat-icon {
+    position: fixed;
+    bottom: 20px; /* Ajusta a distância da parte inferior */
+    right: 20px; /* Ajusta a distância do lado direito */
+    width: 50px; /* Define o tamanho do ícone */
+    height: 50px;
+    background-image: url("C:/Users/walte/Desktop/Projeto Front-End/projeto_front-end/public/fotos/chat.png");
+    background-size: cover; /* Garante que a imagem se ajuste ao ícone */
+    background-position: center;
+    border-radius: 50%; /* Formato redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+    z-index: 1000; /* Mantém o ícone acima de outros elementos */
+}
+
+
 /* Janela do chatbot */
 .chat-window {
     position: fixed;
@@ -121,4 +141,8 @@ header nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background: #005bb5;
 }
