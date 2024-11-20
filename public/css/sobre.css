@@ -99,3 +99,13 @@ p {
     font-size: 0.8em;
     cursor: pointer;
 }
+
+/* imagens das pessoas */
+.image-placeholder {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Mantém a imagem em um círculo */
+    border-radius: 50%; /* Faz com que as imagens fiquem circulares */
+    object-fit: cover; /* Garante que a imagem se ajuste ao círculo sem distorção */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Necessário para centralizar em bloco */
+}
