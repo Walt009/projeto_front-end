@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #004e9a; /* Azul de fundo conforme a imagem */
+    background-color: #004e9a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Remove rolagem */
+    position: relative;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #004e9a;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    margin-bottom: 30px; /* Ajusta a posição dos botões */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0056b3;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0072e3;
+}
+
+/* Seção Principal */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+section.welcome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre a logo e o texto */
+}
+
+.logo {
+    width: 700px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: -100px;
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Barra lateral de cores */
+body::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    width: 70px;
+    height: 100%;
+    margin-top: -30px;
+    background: linear-gradient(to bottom, #00a800, #0073e6, #8500e4, #ff4500, #ffd700);
+}
+
+/* Botões Entrar e Cadastrar */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.button-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+    border-color: white;
+    border-radius: 500px;
+}
